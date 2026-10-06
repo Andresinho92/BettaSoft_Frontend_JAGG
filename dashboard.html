@@ -1,0 +1,546 @@
+ <!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BettaSoft - Dashboard</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+</head>
+
+<body class="dashboard-body">
+
+    <div class="app-layout">
+
+        <!-- ==============================================================
+             BARRA LATERAL
+             ============================================================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+                <i class="bi bi-water" aria-hidden="true"></i>
+                <span>BettaSoft</span>
+            </div>
+
+            <nav class="sidebar-menu" aria-label="Navegación principal">
+
+                <ul>
+
+                    <li class="active">
+                        <a href="dashboard.html">
+                            <i class="bi bi-speedometer2" aria-hidden="true"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="acuarios.html">
+                            <i class="bi bi-droplet" aria-hidden="true"></i>
+                            <span>Acuarios</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="peces.html">
+                            <i class="bi bi-heart-pulse" aria-hidden="true"></i>
+                            <span>Peces</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mantenimientos.html">
+                            <i class="bi bi-tools" aria-hidden="true"></i>
+                            <span>Mantenimientos</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="reportes.html">
+                            <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                            <span>Reportes</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="configuracion.html">
+                            <i class="bi bi-gear" aria-hidden="true"></i>
+                            <span>Configuración</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <div class="sidebar-footer">
+
+                <a href="index.html" class="btn-logout" data-logout>
+                    <i class="bi bi-box-arrow-left" aria-hidden="true"></i>
+                    <span>Cerrar sesión</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==============================================================
+             CONTENIDO PRINCIPAL
+             ============================================================== -->
+
+        <main class="main-content">
+
+            <header class="content-header">
+
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>
+                        Panel general de gestión de BettaSoft
+                    </p>
+                </div>
+
+                <div class="user-profile">
+
+                    <i class="bi bi-person-circle" aria-hidden="true"></i>
+
+                    <span>
+                        Usuario:
+                        <strong data-usuario>Administrador</strong>
+                    </span>
+
+                </div>
+
+            </header>
+
+
+            <!-- ==========================================================
+                 MENSAJE DE BIENVENIDA
+                 ========================================================== -->
+
+            <section class="welcome-box">
+
+                <h3>
+                    ¡Bienvenido a BettaSoft!
+                </h3>
+
+                <p>
+                    Administra tus acuarios, peces y actividades
+                    de mantenimiento desde un solo lugar.
+                </p>
+
+            </section>
+
+
+            <!-- ==========================================================
+                 MÉTRICAS
+                 ========================================================== -->
+
+            <section class="metrics-grid" aria-label="Resumen">
+
+                <article class="metric-card">
+
+                    <div class="metric-icon blue">
+                        <i class="bi bi-droplet" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="metric-data">
+
+                        <h4>Acuarios registrados</h4>
+
+                        <span
+                            class="number"
+                            data-count-acuarios
+                        >
+                            0
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="metric-card">
+
+                    <div class="metric-icon cyan">
+                        <i class="bi bi-fish" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="metric-data">
+
+                        <h4>Peces registrados</h4>
+
+                        <span
+                            class="number"
+                            data-count-peces
+                        >
+                            0
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="metric-card">
+
+                    <div class="metric-icon green">
+                        <i class="bi bi-check-circle" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="metric-data">
+
+                        <h4>Mantenimientos</h4>
+
+                        <span
+                            class="number"
+                            data-count-mantenimientos
+                        >
+                            0
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="metric-card">
+
+                    <div class="metric-icon orange">
+                        <i class="bi bi-shield-check" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="metric-data">
+
+                        <h4>Estado del sistema</h4>
+
+                        <span class="number">
+                            Activo
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- ==========================================================
+                 ACCESOS RÁPIDOS
+                 ========================================================== -->
+
+            <section>
+
+                <div class="content-header">
+
+                    <div>
+                        <h2>
+                            Accesos rápidos
+                        </h2>
+
+                        <p>
+                            Gestiona rápidamente la información
+                            principal del sistema.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="cards-display-grid">
+
+
+                    <!-- ACUARIOS -->
+
+                    <article class="tank-card">
+
+                        <div class="tank-header">
+
+                            <h3>
+                                Gestión de acuarios
+                            </h3>
+
+                            <span class="status-badge active-bg">
+                                Activo
+                            </span>
+
+                        </div>
+
+                        <div class="tank-info-body">
+
+                            <p>
+                                <i
+                                    class="bi bi-droplet"
+                                    aria-hidden="true"
+                                ></i>
+
+                                Administra los acuarios registrados.
+                            </p>
+
+                            <p>
+                                <i
+                                    class="bi bi-rulers"
+                                    aria-hidden="true"
+                                ></i>
+
+                                Consulta capacidad y ubicación.
+                            </p>
+
+                        </div>
+
+                        <div class="tank-card-actions">
+
+                            <a
+                                href="acuarios.html"
+                                class="btn-card-secondary"
+                            >
+                                Ver acuarios
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PECES -->
+
+                    <article class="tank-card fish-card">
+
+                        <div class="tank-header">
+
+                            <h3>
+                                Gestión de peces
+                            </h3>
+
+                            <span class="status-badge active-bg">
+                                Activo
+                            </span>
+
+                        </div>
+
+                        <div class="tank-info-body">
+
+                            <p>
+                                <i
+                                    class="bi bi-fish"
+                                    aria-hidden="true"
+                                ></i>
+
+                                Consulta los peces registrados.
+                            </p>
+
+                            <p>
+                                <i
+                                    class="bi bi-heart-pulse"
+                                    aria-hidden="true"
+                                ></i>
+
+                                Revisa su estado de salud.
+                            </p>
+
+                        </div>
+
+                        <div class="tank-card-actions">
+
+                            <a
+                                href="peces.html"
+                                class="btn-card-secondary"
+                            >
+                                Ver peces
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- MANTENIMIENTOS -->
+
+                    <article class="tank-card">
+
+                        <div class="tank-header">
+
+                            <h3>
+                                Mantenimientos
+                            </h3>
+
+                            <span class="status-badge warning-bg">
+                                Gestionar
+                            </span>
+
+                        </div>
+
+                        <div class="tank-info-body">
+
+                            <p>
+                                <i
+                                    class="bi bi-tools"
+                                    aria-hidden="true"
+                                ></i>
+
+                                Registra actividades de mantenimiento.
+                            </p>
+
+                            <p>
+                                <i
+                                    class="bi bi-calendar-check"
+                                    aria-hidden="true"
+                                ></i>
+
+                                Consulta las tareas realizadas.
+                            </p>
+
+                        </div>
+
+                        <div class="tank-card-actions">
+
+                            <a
+                                href="mantenimientos.html"
+                                class="btn-card-secondary"
+                            >
+                                Ver mantenimientos
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================================================
+                 INFORMACIÓN DEL SISTEMA
+                 ========================================================== -->
+
+            <section class="details-grid">
+
+                <article class="details-card">
+
+                    <h3>
+                        <i
+                            class="bi bi-info-circle"
+                            aria-hidden="true"
+                        ></i>
+
+                        Información del sistema
+                    </h3>
+
+                    <div class="activity-list">
+
+                        <li>
+                            <i
+                                class="bi bi-check-circle"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span>
+                                Front-End desarrollado con HTML,
+                                CSS y JavaScript.
+                            </span>
+                        </li>
+
+                        <li>
+                            <i
+                                class="bi bi-database"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span>
+                                Los datos del prototipo se almacenan
+                                localmente en el navegador.
+                            </span>
+                        </li>
+
+                        <li>
+                            <i
+                                class="bi bi-phone"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span>
+                                Interfaz adaptable a dispositivos
+                                móviles y computadores.
+                            </span>
+                        </li>
+
+                    </div>
+
+                </article>
+
+
+                <article class="details-card">
+
+                    <h3>
+                        <i
+                            class="bi bi-lightbulb"
+                            aria-hidden="true"
+                        ></i>
+
+                        Acciones recomendadas
+                    </h3>
+
+                    <div class="activity-list">
+
+                        <li>
+                            <i
+                                class="bi bi-plus-circle"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span>
+                                Registrar los acuarios disponibles.
+                            </span>
+                        </li>
+
+                        <li>
+                            <i
+                                class="bi bi-plus-circle"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span>
+                                Registrar los peces asociados.
+                            </span>
+                        </li>
+
+                        <li>
+                            <i
+                                class="bi bi-calendar-plus"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span>
+                                Mantener actualizado el historial
+                                de mantenimiento.
+                            </span>
+                        </li>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- ==============================================================
+         JAVASCRIPT
+         ============================================================== -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

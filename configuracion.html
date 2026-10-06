@@ -1,0 +1,834 @@
+ <!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>BettaSoft - Configuración</title>
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+</head>
+
+
+<body class="dashboard-body">
+
+    <div class="app-layout">
+
+
+        <!-- =====================================================
+             BARRA LATERAL
+        ====================================================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+
+                <i
+                    class="bi bi-water"
+                    aria-hidden="true"
+                ></i>
+
+                <span>BettaSoft</span>
+
+            </div>
+
+
+            <nav
+                class="sidebar-menu"
+                aria-label="Navegación principal"
+            >
+
+                <ul>
+
+                    <li>
+
+                        <a href="dashboard.html">
+
+                            <i class="bi bi-speedometer2"></i>
+
+                            <span>Dashboard</span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="acuarios.html">
+
+                            <i class="bi bi-droplet"></i>
+
+                            <span>Acuarios</span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="peces.html">
+
+                            <i class="bi bi-fish"></i>
+
+                            <span>Peces</span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="mantenimientos.html">
+
+                            <i class="bi bi-tools"></i>
+
+                            <span>Mantenimientos</span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="reportes.html">
+
+                            <i class="bi bi-bar-chart-line"></i>
+
+                            <span>Reportes</span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="active">
+
+                        <a href="configuracion.html">
+
+                            <i class="bi bi-gear"></i>
+
+                            <span>Configuración</span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- CERRAR SESIÓN -->
+
+            <div class="sidebar-footer">
+
+                <a
+                    href="index.html"
+                    class="btn-logout"
+                    data-logout
+                >
+
+                    <i class="bi bi-box-arrow-left"></i>
+
+                    <span>Cerrar sesión</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =====================================================
+             CONTENIDO PRINCIPAL
+        ====================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- ENCABEZADO -->
+
+            <header class="content-header">
+
+                <div>
+
+                    <h1>Configuración</h1>
+
+                    <p>
+                        Administra las preferencias básicas
+                        de tu aplicación BettaSoft.
+                    </p>
+
+                </div>
+
+
+                <div class="user-profile">
+
+                    <i class="bi bi-person-circle"></i>
+
+                    <span>
+
+                        Usuario:
+
+                        <strong data-usuario>
+                            Administrador
+                        </strong>
+
+                    </span>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 PERFIL Y PREFERENCIAS
+            ================================================== -->
+
+            <section class="details-grid">
+
+
+                <!-- PERFIL -->
+
+                <article class="details-card">
+
+                    <h3>
+
+                        <i class="bi bi-person-circle"></i>
+
+                        Perfil de usuario
+
+                    </h3>
+
+
+                    <div class="activity-list">
+
+                        <li>
+
+                            <i class="bi bi-person"></i>
+
+                            <span>
+
+                                Usuario actual:
+
+                                <strong data-usuario>
+                                    Administrador
+                                </strong>
+
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="bi bi-shield-check"></i>
+
+                            <span>
+
+                                Rol:
+
+                                <strong>
+                                    Administrador
+                                </strong>
+
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="bi bi-check-circle"></i>
+
+                            <span>
+
+                                Estado:
+
+                                <strong>
+                                    Sesión activa
+                                </strong>
+
+                            </span>
+
+                        </li>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PREFERENCIAS -->
+
+                <article class="details-card">
+
+                    <h3>
+
+                        <i class="bi bi-sliders"></i>
+
+                        Preferencias
+
+                    </h3>
+
+
+                    <form
+                        id="form-preferencias"
+                        autocomplete="off"
+                    >
+
+
+                        <!-- IDIOMA -->
+
+                        <div class="form-group-modal">
+
+                            <label for="idioma">
+
+                                <i class="bi bi-translate"></i>
+
+                                Idioma
+
+                            </label>
+
+
+                            <select
+                                id="idioma"
+                                name="idioma"
+                            >
+
+                                <option value="es">
+                                    Español
+                                </option>
+
+                                <option value="en">
+                                    Inglés
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- NOTIFICACIONES -->
+
+                        <div
+                            style="
+                                margin-top:20px;
+                                margin-bottom:20px;
+                            "
+                        >
+
+                            <label
+                                for="notificaciones"
+                                style="
+                                    display:flex;
+                                    align-items:center;
+                                    gap:10px;
+                                    color:#1C2541;
+                                    font-weight:600;
+                                    cursor:pointer;
+                                "
+                            >
+
+                                <input
+                                    type="checkbox"
+                                    id="notificaciones"
+                                    name="notificaciones"
+                                    checked
+                                >
+
+                                <span>
+                                    Recibir notificaciones
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+
+                        <!-- BOTÓN -->
+
+                        <button
+                            type="submit"
+                            class="btn-submit-modal"
+                        >
+
+                            <i class="bi bi-save"></i>
+
+                            Guardar preferencias
+
+                        </button>
+
+                    </form>
+
+                </article>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 INFORMACIÓN DEL SISTEMA
+            ================================================== -->
+
+            <section class="details-grid">
+
+
+                <!-- ALMACENAMIENTO -->
+
+                <article class="details-card">
+
+                    <h3>
+
+                        <i class="bi bi-database"></i>
+
+                        Almacenamiento
+
+                    </h3>
+
+
+                    <div class="activity-list">
+
+                        <li>
+
+                            <i class="bi bi-browser-chrome"></i>
+
+                            <span>
+
+                                Los datos del prototipo se almacenan
+                                localmente en el navegador.
+
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="bi bi-shield-check"></i>
+
+                            <span>
+
+                                La información permanece disponible
+                                mientras no se borre el almacenamiento
+                                del navegador.
+
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="bi bi-lightning-charge"></i>
+
+                            <span>
+
+                                BettaSoft funciona como un prototipo
+                                Front-End sin conexión a una base de
+                                datos externa.
+
+                            </span>
+
+                        </li>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- INFORMACIÓN DEL PROYECTO -->
+
+                <article class="details-card">
+
+                    <h3>
+
+                        <i class="bi bi-info-circle"></i>
+
+                        Información de BettaSoft
+
+                    </h3>
+
+
+                    <div class="activity-list">
+
+                        <li>
+
+                            <i class="bi bi-code-slash"></i>
+
+                            <span>
+
+                                Aplicación Front-End desarrollada
+                                con HTML, CSS y JavaScript.
+
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="bi bi-mortarboard"></i>
+
+                            <span>
+
+                                Prototipo desarrollado como evidencia
+                                del programa ADSO.
+
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="bi bi-calendar3"></i>
+
+                            <span>
+
+                                Año:
+
+                                <strong>
+                                    2026
+                                </strong>
+
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="bi bi-water"></i>
+
+                            <span>
+
+                                Sistema:
+
+                                <strong>
+                                    BettaSoft
+                                </strong>
+
+                            </span>
+
+                        </li>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SEGURIDAD
+            ================================================== -->
+
+            <section class="details-card">
+
+                <h3>
+
+                    <i class="bi bi-shield-lock"></i>
+
+                    Seguridad
+
+                </h3>
+
+
+                <div class="alert-item">
+
+                    <strong>
+
+                        <i class="bi bi-check-circle"></i>
+
+                        Sesión protegida
+
+                    </strong>
+
+
+                    <p style="margin-top:8px;">
+
+                        Para finalizar la sesión actual,
+                        utiliza el botón
+                        <strong>"Cerrar sesión"</strong>
+                        ubicado en el menú lateral.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ESTADO DE PREFERENCIAS
+            ================================================== -->
+
+            <section class="details-card">
+
+                <h3>
+
+                    <i class="bi bi-check2-circle"></i>
+
+                    Estado de configuración
+
+                </h3>
+
+
+                <div class="activity-list">
+
+                    <li>
+
+                        <i class="bi bi-translate"></i>
+
+                        <span>
+
+                            Idioma seleccionado:
+
+                            <strong id="idioma-actual">
+                                Español
+                            </strong>
+
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <i class="bi bi-bell"></i>
+
+                        <span>
+
+                            Notificaciones:
+
+                            <strong id="notificaciones-actual">
+                                Activadas
+                            </strong>
+
+                        </span>
+
+                    </li>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT PRINCIPAL
+    ====================================================== -->
+
+    <script src="js/script.js"></script>
+
+
+    <!-- =====================================================
+         CONFIGURACIÓN DE PREFERENCIAS
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const formulario =
+                    document.getElementById(
+                        "form-preferencias"
+                    );
+
+                const idioma =
+                    document.getElementById(
+                        "idioma"
+                    );
+
+                const notificaciones =
+                    document.getElementById(
+                        "notificaciones"
+                    );
+
+                const idiomaActual =
+                    document.getElementById(
+                        "idioma-actual"
+                    );
+
+                const notificacionesActual =
+                    document.getElementById(
+                        "notificaciones-actual"
+                    );
+
+
+                if (!formulario) {
+                    return;
+                }
+
+
+                /*
+                 * Recuperar preferencias guardadas
+                 */
+
+                const idiomaGuardado =
+                    localStorage.getItem(
+                        "bettasoft_idioma"
+                    );
+
+
+                const notificacionesGuardadas =
+                    localStorage.getItem(
+                        "bettasoft_notificaciones"
+                    );
+
+
+                if (idiomaGuardado) {
+
+                    idioma.value =
+                        idiomaGuardado;
+
+                }
+
+
+                if (
+                    notificacionesGuardadas !== null
+                ) {
+
+                    notificaciones.checked =
+                        notificacionesGuardadas === "true";
+
+                }
+
+
+                /*
+                 * Actualizar información visual
+                 */
+
+                function actualizarEstado() {
+
+                    if (
+                        idioma.value === "en"
+                    ) {
+
+                        idiomaActual.textContent =
+                            "Inglés";
+
+                    } else {
+
+                        idiomaActual.textContent =
+                            "Español";
+
+                    }
+
+
+                    if (
+                        notificaciones.checked
+                    ) {
+
+                        notificacionesActual.textContent =
+                            "Activadas";
+
+                    } else {
+
+                        notificacionesActual.textContent =
+                            "Desactivadas";
+
+                    }
+
+                }
+
+
+                actualizarEstado();
+
+
+                /*
+                 * Detectar cambios
+                 */
+
+                idioma.addEventListener(
+                    "change",
+                    actualizarEstado
+                );
+
+
+                notificaciones.addEventListener(
+                    "change",
+                    actualizarEstado
+                );
+
+
+                /*
+                 * Guardar preferencias
+                 */
+
+                formulario.addEventListener(
+                    "submit",
+                    function (event) {
+
+                        event.preventDefault();
+
+
+                        localStorage.setItem(
+                            "bettasoft_idioma",
+                            idioma.value
+                        );
+
+
+                        localStorage.setItem(
+                            "bettasoft_notificaciones",
+                            String(
+                                notificaciones.checked
+                            )
+                        );
+
+
+                        actualizarEstado();
+
+
+                        alert(
+                            "Las preferencias se guardaron correctamente."
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

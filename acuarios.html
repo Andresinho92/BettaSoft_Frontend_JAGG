@@ -1,0 +1,540 @@
+ <!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BettaSoft - Acuarios</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+</head>
+
+<body class="dashboard-body">
+
+    <div class="app-layout">
+
+        <!-- ==============================================================
+             BARRA LATERAL
+             ============================================================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+                <i class="bi bi-water" aria-hidden="true"></i>
+                <span>BettaSoft</span>
+            </div>
+
+            <nav class="sidebar-menu" aria-label="Navegación principal">
+
+                <ul>
+
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="bi bi-speedometer2" aria-hidden="true"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="active">
+                        <a href="acuarios.html">
+                            <i class="bi bi-droplet" aria-hidden="true"></i>
+                            <span>Acuarios</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="peces.html">
+                            <i class="bi bi-heart-pulse" aria-hidden="true"></i>
+                            <span>Peces</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mantenimientos.html">
+                            <i class="bi bi-tools" aria-hidden="true"></i>
+                            <span>Mantenimientos</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="reportes.html">
+                            <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                            <span>Reportes</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="configuracion.html">
+                            <i class="bi bi-gear" aria-hidden="true"></i>
+                            <span>Configuración</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <div class="sidebar-footer">
+
+                <a
+                    href="index.html"
+                    class="btn-logout"
+                    data-logout
+                >
+                    <i class="bi bi-box-arrow-left" aria-hidden="true"></i>
+                    <span>Cerrar sesión</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==============================================================
+             CONTENIDO PRINCIPAL
+             ============================================================== -->
+
+        <main class="main-content">
+
+            <header class="content-header">
+
+                <div>
+                    <h1>Gestión de acuarios</h1>
+
+                    <p>
+                        Registra y administra los acuarios de BettaSoft.
+                    </p>
+                </div>
+
+                <div class="user-profile">
+
+                    <i
+                        class="bi bi-person-circle"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Usuario:
+                        <strong data-usuario>Administrador</strong>
+                    </span>
+
+                </div>
+
+            </header>
+
+
+            <!-- ==========================================================
+                 ACCIONES
+                 ========================================================== -->
+
+            <section class="welcome-box">
+
+                <h3>
+                    Administración de acuarios
+                </h3>
+
+                <p>
+                    Consulta la información de los acuarios registrados
+                    y agrega nuevos espacios para tus peces.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <div
+                    style="
+                        display:flex;
+                        flex-wrap:wrap;
+                        gap:15px;
+                        justify-content:space-between;
+                        align-items:center;
+                        margin-bottom:20px;
+                    "
+                >
+
+                    <input
+                        type="search"
+                        data-search=".acuario-row"
+                        placeholder="Buscar acuario..."
+                        aria-label="Buscar acuario"
+                        style="
+                            flex:1;
+                            min-width:220px;
+                            max-width:400px;
+                            padding:12px 15px;
+                            border:2px solid #E2E8F0;
+                            border-radius:8px;
+                            outline:none;
+                        "
+                    >
+
+                    <button
+                        type="button"
+                        class="btn-primary-action"
+                        data-modal="modal-acuario"
+                    >
+                        <i
+                            class="bi bi-plus-circle"
+                            aria-hidden="true"
+                        ></i>
+
+                        <span>Nuevo acuario</span>
+                    </button>
+
+                </div>
+
+
+                <!-- ======================================================
+                     TABLA DE ACUARIOS
+                     ====================================================== -->
+
+                <div style="overflow-x:auto;">
+
+                    <table class="tabla-custom">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Nombre
+                                </th>
+
+                                <th>
+                                    Capacidad
+                                </th>
+
+                                <th>
+                                    Ubicación
+                                </th>
+
+                                <th>
+                                    Estado
+                                </th>
+
+                                <th>
+                                    Acciones
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr class="acuario-row">
+
+                                <td>
+                                    Acuario Betta Principal
+                                </td>
+
+                                <td>
+                                    20 litros
+                                </td>
+
+                                <td>
+                                    Sala
+                                </td>
+
+                                <td>
+                                    <span class="status-badge active-bg">
+                                        Activo
+                                    </span>
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        type="button"
+                                        class="btn-card-secondary"
+                                        title="Consultar acuario"
+                                    >
+                                        <i
+                                            class="bi bi-eye"
+                                            aria-hidden="true"
+                                        ></i>
+
+                                        Ver
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr class="acuario-row">
+
+                                <td>
+                                    Acuario de Cuarentena
+                                </td>
+
+                                <td>
+                                    10 litros
+                                </td>
+
+                                <td>
+                                    Área de cuidado
+                                </td>
+
+                                <td>
+                                    <span class="status-badge active-bg">
+                                        Activo
+                                    </span>
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        type="button"
+                                        class="btn-card-secondary"
+                                        title="Consultar acuario"
+                                    >
+                                        <i
+                                            class="bi bi-eye"
+                                            aria-hidden="true"
+                                        ></i>
+
+                                        Ver
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================================================
+                 INFORMACIÓN
+                 ========================================================== -->
+
+            <section class="details-grid">
+
+                <article class="details-card">
+
+                    <h3>
+                        <i
+                            class="bi bi-droplet"
+                            aria-hidden="true"
+                        ></i>
+
+                        Recomendaciones
+                    </h3>
+
+                    <div class="activity-list">
+
+                        <li>
+                            <i
+                                class="bi bi-check-circle"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span>
+                                Mantén actualizada la capacidad
+                                de cada acuario.
+                            </span>
+                        </li>
+
+                        <li>
+                            <i
+                                class="bi bi-check-circle"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span>
+                                Registra correctamente la ubicación
+                                de cada acuario.
+                            </span>
+                        </li>
+
+                    </div>
+
+                </article>
+
+
+                <article class="details-card">
+
+                    <h3>
+                        <i
+                            class="bi bi-info-circle"
+                            aria-hidden="true"
+                        ></i>
+
+                        Resumen
+                    </h3>
+
+                    <div class="activity-list">
+
+                        <li>
+                            <i
+                                class="bi bi-database"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span>
+                                Los registros se conservan
+                                localmente en el navegador.
+                            </span>
+                        </li>
+
+                        <li>
+                            <i
+                                class="bi bi-plus-circle"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span>
+                                Puedes agregar nuevos acuarios
+                                mediante el botón superior.
+                            </span>
+                        </li>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- ==============================================================
+         MODAL - NUEVO ACUARIO
+         ============================================================== -->
+
+    <div
+        class="modal-overlay"
+        id="modal-acuario"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="titulo-modal-acuario"
+    >
+
+        <div class="modal-box">
+
+            <header class="modal-header">
+
+                <h3 id="titulo-modal-acuario">
+                    Nuevo acuario
+                </h3>
+
+                <button
+                    type="button"
+                    class="close-modal"
+                    aria-label="Cerrar ventana"
+                >
+                    <i
+                        class="bi bi-x-lg"
+                        aria-hidden="true"
+                    ></i>
+                </button>
+
+            </header>
+
+
+            <form
+                id="form-acuario"
+                class="modal-form"
+                novalidate
+            >
+
+                <div class="form-group-modal">
+
+                    <label for="nombre-acuario">
+                        Nombre del acuario
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre-acuario"
+                        name="nombre-acuario"
+                        placeholder="Ejemplo: Acuario Betta Principal"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group-row">
+
+                    <div class="form-group-modal">
+
+                        <label for="capacidad">
+                            Capacidad
+                        </label>
+
+                        <input
+                            type="number"
+                            id="capacidad"
+                            name="capacidad"
+                            min="1"
+                            placeholder="Ejemplo: 20"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group-modal">
+
+                        <label for="ubicacion">
+                            Ubicación
+                        </label>
+
+                        <input
+                            type="text"
+                            id="ubicacion"
+                            name="ubicacion"
+                            placeholder="Ejemplo: Sala"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn-submit-modal"
+                >
+                    <i
+                        class="bi bi-save"
+                        aria-hidden="true"
+                    ></i>
+
+                    Guardar acuario
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==============================================================
+         JAVASCRIPT
+         ============================================================== -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

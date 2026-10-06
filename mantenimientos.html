@@ -1,0 +1,555 @@
+ <!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BettaSoft - Mantenimientos</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+</head>
+
+<body class="dashboard-body">
+
+    <div class="app-layout">
+
+        <!-- =====================================================
+             BARRA LATERAL
+        ====================================================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+                <i class="bi bi-water" aria-hidden="true"></i>
+                <span>BettaSoft</span>
+            </div>
+
+            <nav
+                class="sidebar-menu"
+                aria-label="Navegación principal"
+            >
+
+                <ul>
+
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="bi bi-speedometer2"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="acuarios.html">
+                            <i class="bi bi-droplet"></i>
+                            <span>Acuarios</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="peces.html">
+                            <i class="bi bi-fish"></i>
+                            <span>Peces</span>
+                        </a>
+                    </li>
+
+                    <li class="active">
+                        <a href="mantenimientos.html">
+                            <i class="bi bi-tools"></i>
+                            <span>Mantenimientos</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="reportes.html">
+                            <i class="bi bi-bar-chart-line"></i>
+                            <span>Reportes</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="configuracion.html">
+                            <i class="bi bi-gear"></i>
+                            <span>Configuración</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <div class="sidebar-footer">
+
+                <a
+                    href="index.html"
+                    class="btn-logout"
+                    data-logout
+                >
+
+                    <i class="bi bi-box-arrow-left"></i>
+
+                    <span>Cerrar sesión</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================================
+             CONTENIDO PRINCIPAL
+        ====================================================== -->
+
+        <main class="main-content">
+
+            <!-- ENCABEZADO -->
+
+            <header class="content-header">
+
+                <div>
+
+                    <h1>Gestión de mantenimientos</h1>
+
+                    <p>
+                        Registra y consulta las actividades
+                        realizadas en los acuarios.
+                    </p>
+
+                </div>
+
+                <div class="user-profile">
+
+                    <i class="bi bi-person-circle"></i>
+
+                    <span>
+                        Usuario:
+                        <strong data-usuario>
+                            Administrador
+                        </strong>
+                    </span>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 BIENVENIDA
+            ================================================== -->
+
+            <section class="welcome-box">
+
+                <h3>
+                    Control de mantenimiento
+                </h3>
+
+                <p>
+                    Lleva un registro organizado de los cambios
+                    de agua, limpiezas y demás actividades
+                    realizadas en los acuarios.
+                </p>
+
+            </section>
+
+
+            <!-- =================================================
+                 HERRAMIENTAS
+            ================================================== -->
+
+            <section class="module-toolbar">
+
+                <div>
+
+                    <h2>
+                        <i class="bi bi-tools"></i>
+                        Historial de mantenimiento
+                    </h2>
+
+                    <p>
+                        Consulta y registra las actividades
+                        realizadas en los acuarios.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="btn-primary-action"
+                    data-modal="modal-mantenimiento"
+                >
+
+                    <i class="bi bi-plus-circle"></i>
+
+                    Nuevo mantenimiento
+
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 BUSCADOR
+            ================================================== -->
+
+            <section class="search-section">
+
+                <div class="search-box">
+
+                    <i class="bi bi-search"></i>
+
+                    <input
+                        type="search"
+                        id="buscador-mantenimientos"
+                        placeholder="Buscar mantenimiento..."
+                        aria-label="Buscar mantenimiento"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 TABLA
+            ================================================== -->
+
+            <section class="table-card">
+
+                <div class="table-responsive">
+
+                    <table class="tabla-custom">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Fecha</th>
+
+                                <th>Tipo</th>
+
+                                <th>Acuario</th>
+
+                                <th>Responsable</th>
+
+                                <th>Estado</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <!--
+                                Los registros se cargan
+                                automáticamente mediante JavaScript.
+                            -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 INFORMACIÓN COMPLEMENTARIA
+            ================================================== -->
+
+            <section class="details-grid">
+
+
+                <article class="details-card">
+
+                    <h3>
+
+                        <i class="bi bi-calendar-check"></i>
+
+                        Recomendaciones
+
+                    </h3>
+
+                    <div class="activity-list">
+
+                        <li>
+
+                            <i class="bi bi-check-circle"></i>
+
+                            <span>
+                                Registra cada actividad después
+                                de realizarla.
+                            </span>
+
+                        </li>
+
+                        <li>
+
+                            <i class="bi bi-clock"></i>
+
+                            <span>
+                                Mantén actualizado el historial
+                                de mantenimiento.
+                            </span>
+
+                        </li>
+
+                    </div>
+
+                </article>
+
+
+                <article class="details-card">
+
+                    <h3>
+
+                        <i class="bi bi-tools"></i>
+
+                        Actividades
+
+                    </h3>
+
+                    <div class="activity-list">
+
+                        <li>
+
+                            <i class="bi bi-droplet"></i>
+
+                            <span>
+                                Cambio de agua.
+                            </span>
+
+                        </li>
+
+                        <li>
+
+                            <i class="bi bi-stars"></i>
+
+                            <span>
+                                Limpieza del acuario.
+                            </span>
+
+                        </li>
+
+                        <li>
+
+                            <i class="bi bi-clipboard-check"></i>
+
+                            <span>
+                                Revisión general.
+                            </span>
+
+                        </li>
+
+                        <li>
+
+                            <i class="bi bi-egg-fried"></i>
+
+                            <span>
+                                Alimentación.
+                            </span>
+
+                        </li>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================================================
+         MODAL NUEVO MANTENIMIENTO
+    ========================================================== -->
+
+    <div
+        class="modal-overlay"
+        id="modal-mantenimiento"
+        aria-hidden="true"
+    >
+
+        <div
+            class="modal-box"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="titulo-modal-mantenimiento"
+        >
+
+            <!-- ENCABEZADO DEL MODAL -->
+
+            <header class="modal-header">
+
+                <h2 id="titulo-modal-mantenimiento">
+
+                    <i class="bi bi-tools"></i>
+
+                    Registrar mantenimiento
+
+                </h2>
+
+                <button
+                    type="button"
+                    class="close-modal"
+                    data-close-modal
+                    aria-label="Cerrar ventana"
+                >
+
+                    <i class="bi bi-x-lg"></i>
+
+                </button>
+
+            </header>
+
+
+            <!-- FORMULARIO -->
+
+            <form
+                id="form-mantenimiento"
+                class="modal-form"
+                novalidate
+            >
+
+
+                <!-- FECHA -->
+
+                <div class="form-group-modal">
+
+                    <label for="fecha-mantenimiento">
+
+                        Fecha
+
+                    </label>
+
+                    <input
+                        type="date"
+                        id="fecha-mantenimiento"
+                        name="fecha"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- TIPO -->
+
+                <div class="form-group-modal">
+
+                    <label for="tipo-mantenimiento">
+
+                        Tipo de mantenimiento
+
+                    </label>
+
+                    <select
+                        id="tipo-mantenimiento"
+                        name="tipo"
+                        required
+                    >
+
+                        <option value="">
+                            Selecciona una opción
+                        </option>
+
+                        <option value="Cambio de agua">
+                            Cambio de agua
+                        </option>
+
+                        <option value="Limpieza">
+                            Limpieza
+                        </option>
+
+                        <option value="Revisión general">
+                            Revisión general
+                        </option>
+
+                        <option value="Alimentación">
+                            Alimentación
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ACUARIO -->
+
+                <div class="form-group-modal">
+
+                    <label for="acuario-mantenimiento">
+
+                        Acuario
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="acuario-mantenimiento"
+                        name="acuario"
+                        placeholder="Ej. Acuario Betta Principal"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- RESPONSABLE -->
+
+                <div class="form-group-modal">
+
+                    <label for="responsable-mantenimiento">
+
+                        Responsable
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="responsable-mantenimiento"
+                        name="responsable"
+                        placeholder="Nombre del responsable"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- BOTÓN GUARDAR -->
+
+                <button
+                    type="submit"
+                    class="btn-submit-modal"
+                >
+
+                    <i class="bi bi-save"></i>
+
+                    Guardar mantenimiento
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,450 @@
+ <!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BettaSoft - Peces</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+</head>
+
+<body class="dashboard-body">
+
+    <div class="app-layout">
+
+        <!-- =========================================================
+             BARRA LATERAL
+        ========================================================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+                <i class="bi bi-water"></i>
+                <span>BettaSoft</span>
+            </div>
+
+            <nav class="sidebar-menu" aria-label="Navegación principal">
+
+                <ul>
+
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="bi bi-speedometer2"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="acuarios.html">
+                            <i class="bi bi-droplet"></i>
+                            <span>Acuarios</span>
+                        </a>
+                    </li>
+
+                    <li class="active">
+                        <a href="peces.html">
+                            <i class="bi bi-fish"></i>
+                            <span>Peces</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mantenimientos.html">
+                            <i class="bi bi-tools"></i>
+                            <span>Mantenimientos</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="reportes.html">
+                            <i class="bi bi-bar-chart-line"></i>
+                            <span>Reportes</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="configuracion.html">
+                            <i class="bi bi-gear"></i>
+                            <span>Configuración</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <div class="sidebar-footer">
+
+                <a
+                    href="index.html"
+                    class="btn-logout"
+                    data-logout
+                >
+                    <i class="bi bi-box-arrow-left"></i>
+                    <span>Cerrar sesión</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =========================================================
+             CONTENIDO PRINCIPAL
+        ========================================================== -->
+
+        <main class="main-content">
+
+            <header class="content-header">
+
+                <div>
+
+                    <h1>Peces</h1>
+
+                    <p>
+                        Gestiona los ejemplares Betta registrados
+                        en el sistema.
+                    </p>
+
+                </div>
+
+                <div class="user-profile">
+
+                    <i class="bi bi-person-circle"></i>
+
+                    <span>
+                        Usuario:
+                        <strong data-usuario>Administrador</strong>
+                    </span>
+
+                </div>
+
+            </header>
+
+
+            <!-- =====================================================
+                 ENCABEZADO DEL MÓDULO
+            ====================================================== -->
+
+            <section class="module-toolbar">
+
+                <div>
+
+                    <h2>
+                        <i class="bi bi-fish"></i>
+                        Registro de peces
+                    </h2>
+
+                    <p>
+                        Consulta y administra los ejemplares
+                        registrados.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="btn-primary-action"
+                    id="btn-nuevo-pez"
+                >
+                    <i class="bi bi-plus-circle"></i>
+                    Nuevo pez
+                </button>
+
+            </section>
+
+
+            <!-- =====================================================
+                 BUSCADOR
+            ====================================================== -->
+
+            <section class="search-section">
+
+                <div class="search-box">
+
+                    <i
+                        class="bi bi-search"
+                        aria-hidden="true"
+                    ></i>
+
+                    <input
+                        type="search"
+                        id="buscador-peces"
+                        placeholder="Buscar pez, especie, color o acuario..."
+                        aria-label="Buscar peces"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 TABLA DE PECES
+            ====================================================== -->
+
+            <section class="table-card">
+
+                <div class="table-responsive">
+
+                    <table class="tabla-custom">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Nombre</th>
+                                <th>Especie</th>
+                                <th>Color</th>
+                                <th>Acuario</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="tabla-peces-body">
+
+                            <!-- JavaScript cargará los peces aquí -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 INFORMACIÓN COMPLEMENTARIA
+            ====================================================== -->
+
+            <section class="details-grid">
+
+                <article
+                    class="details-card"
+                    style="
+                        background-image:
+                        linear-gradient(
+                            rgba(11, 19, 43, 0.78),
+                            rgba(11, 19, 43, 0.78)
+                        ),
+                        url('imagenes/betta_salud.jpg');
+                        background-size: cover;
+                        background-position: center;
+                        color: white;
+                    "
+                >
+
+                    <h3>
+
+                        <i class="bi bi-heart-pulse"></i>
+
+                        Salud de los peces
+
+                    </h3>
+
+                    <p>
+
+                        Mantén un seguimiento del estado
+                        de cada ejemplar y registra cualquier
+                        novedad relacionada con su salud.
+
+                    </p>
+
+                </article>
+
+
+                <article
+                    class="details-card"
+                    style="
+                        background-image:
+                        linear-gradient(
+                            rgba(11, 19, 43, 0.78),
+                            rgba(11, 19, 43, 0.78)
+                        ),
+                        url('imagenes/betta_alimento.jpg');
+                        background-size: cover;
+                        background-position: center;
+                        color: white;
+                    "
+                >
+
+                    <h3>
+
+                        <i class="bi bi-egg-fried"></i>
+
+                        Alimentación
+
+                    </h3>
+
+                    <p>
+
+                        Lleva un control adecuado de la alimentación
+                        para contribuir al bienestar de los ejemplares.
+
+                    </p>
+
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =============================================================
+         MODAL PARA REGISTRAR PEZ
+    ============================================================= -->
+
+    <div
+        id="modal-pez"
+        class="modal-overlay"
+        aria-hidden="true"
+    >
+
+        <div
+            class="modal-box"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="titulo-modal-pez"
+        >
+
+            <div class="modal-header">
+
+                <h2 id="titulo-modal-pez">
+
+                    <i class="bi bi-fish"></i>
+
+                    Registrar nuevo pez
+
+                </h2>
+
+                <button
+                    type="button"
+                    class="close-modal"
+                    id="btn-cerrar-modal-pez"
+                    aria-label="Cerrar ventana"
+                >
+                    <i class="bi bi-x-lg"></i>
+                </button>
+
+            </div>
+
+
+            <form
+                id="form-nuevo-pez"
+                class="modal-form"
+                novalidate
+            >
+
+                <div class="form-group-modal">
+
+                    <label for="nombre-pez">
+                        Nombre del pez
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre-pez"
+                        name="nombre"
+                        placeholder="Ej. Rocky"
+                        required
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="form-group-modal">
+
+                    <label for="especie">
+                        Especie
+                    </label>
+
+                    <input
+                        type="text"
+                        id="especie"
+                        name="especie"
+                        placeholder="Ej. Betta Splendens"
+                        required
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="form-group-modal">
+
+                    <label for="color">
+                        Color
+                    </label>
+
+                    <input
+                        type="text"
+                        id="color"
+                        name="color"
+                        placeholder="Ej. Azul y rojo"
+                        required
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="form-group-modal">
+
+                    <label for="acuario">
+                        Acuario
+                    </label>
+
+                    <input
+                        type="text"
+                        id="acuario"
+                        name="acuario"
+                        placeholder="Ej. Acuario Betta Principal"
+                        required
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn-submit-modal"
+                >
+
+                    <i class="bi bi-save"></i>
+
+                    Guardar pez
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =============================================================
+         JAVASCRIPT
+    ============================================================= -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

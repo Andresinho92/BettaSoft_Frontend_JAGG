@@ -1,0 +1,872 @@
+ <!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>BettaSoft - Reportes</title>
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+</head>
+
+
+<body class="dashboard-body">
+
+    <div class="app-layout">
+
+
+        <!-- =====================================================
+             BARRA LATERAL
+        ====================================================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+
+                <i
+                    class="bi bi-water"
+                    aria-hidden="true"
+                ></i>
+
+                <span>BettaSoft</span>
+
+            </div>
+
+
+            <nav
+                class="sidebar-menu"
+                aria-label="Navegación principal"
+            >
+
+                <ul>
+
+                    <li>
+
+                        <a href="dashboard.html">
+
+                            <i class="bi bi-speedometer2"></i>
+
+                            <span>Dashboard</span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="acuarios.html">
+
+                            <i class="bi bi-droplet"></i>
+
+                            <span>Acuarios</span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="peces.html">
+
+                            <i class="bi bi-fish"></i>
+
+                            <span>Peces</span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="mantenimientos.html">
+
+                            <i class="bi bi-tools"></i>
+
+                            <span>Mantenimientos</span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="active">
+
+                        <a href="reportes.html">
+
+                            <i class="bi bi-bar-chart-line"></i>
+
+                            <span>Reportes</span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="configuracion.html">
+
+                            <i class="bi bi-gear"></i>
+
+                            <span>Configuración</span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- CERRAR SESIÓN -->
+
+            <div class="sidebar-footer">
+
+                <a
+                    href="index.html"
+                    class="btn-logout"
+                    data-logout
+                >
+
+                    <i class="bi bi-box-arrow-left"></i>
+
+                    <span>Cerrar sesión</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =====================================================
+             CONTENIDO PRINCIPAL
+        ====================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- ENCABEZADO -->
+
+            <header class="content-header">
+
+                <div>
+
+                    <h1>Reportes</h1>
+
+                    <p>
+                        Consulta un resumen general
+                        de la información registrada
+                        en BettaSoft.
+                    </p>
+
+                </div>
+
+
+                <div class="user-profile">
+
+                    <i class="bi bi-person-circle"></i>
+
+                    <span>
+
+                        Usuario:
+
+                        <strong data-usuario>
+                            Administrador
+                        </strong>
+
+                    </span>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 INTRODUCCIÓN
+            ================================================== -->
+
+            <section class="welcome-box">
+
+                <h3>
+
+                    <i class="bi bi-bar-chart-line"></i>
+
+                    Resumen del sistema
+
+                </h3>
+
+                <p>
+
+                    Consulta los principales indicadores
+                    de gestión de acuarios, peces y
+                    mantenimientos registrados en BettaSoft.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 INDICADORES
+            ================================================== -->
+
+            <section class="metrics-grid">
+
+
+                <!-- ACUARIOS -->
+
+                <article class="metric-card">
+
+                    <div class="metric-icon blue">
+
+                        <i
+                            class="bi bi-droplet"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+
+                    <div class="metric-data">
+
+                        <h4>
+                            Total de acuarios
+                        </h4>
+
+                        <span
+                            class="number"
+                            data-count-acuarios
+                        >
+                            0
+                        </span>
+
+                        <p>
+                            Registrados
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PECES -->
+
+                <article class="metric-card">
+
+                    <div class="metric-icon cyan">
+
+                        <i
+                            class="bi bi-fish"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+
+                    <div class="metric-data">
+
+                        <h4>
+                            Total de peces
+                        </h4>
+
+                        <span
+                            class="number"
+                            data-count-peces
+                        >
+                            0
+                        </span>
+
+                        <p>
+                            Registrados
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- MANTENIMIENTOS -->
+
+                <article class="metric-card">
+
+                    <div class="metric-icon green">
+
+                        <i
+                            class="bi bi-tools"
+                            aria-hidden="true"
+                        ></i>
+
+                    </div>
+
+
+                    <div class="metric-data">
+
+                        <h4>
+                            Mantenimientos
+                        </h4>
+
+                        <span
+                            class="number"
+                            data-count-mantenimientos
+                        >
+                            0
+                        </span>
+
+                        <p>
+                            Registrados
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 INFORMACIÓN DE REPORTES
+            ================================================== -->
+
+            <section class="details-grid">
+
+
+                <!-- REPORTE ACUARIOS -->
+
+                <article class="details-card">
+
+                    <h3>
+
+                        <i class="bi bi-droplet"></i>
+
+                        Reporte de acuarios
+
+                    </h3>
+
+
+                    <div class="activity-list">
+
+                        <li>
+
+                            <i class="bi bi-check-circle"></i>
+
+                            <span>
+                                Consulta los acuarios
+                                registrados.
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="bi bi-geo-alt"></i>
+
+                            <span>
+                                Revisa ubicación y
+                                capacidad.
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="bi bi-eye"></i>
+
+                            <span>
+                                Consulta el estado de
+                                cada acuario.
+                            </span>
+
+                        </li>
+
+                    </div>
+
+
+                    <br>
+
+
+                    <a
+                        href="acuarios.html"
+                        class="btn-card-secondary"
+                        style="
+                            display:inline-block;
+                            text-decoration:none;
+                        "
+                    >
+
+                        <i class="bi bi-arrow-right"></i>
+
+                        Ver acuarios
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- REPORTE PECES -->
+
+                <article class="details-card">
+
+                    <h3>
+
+                        <i class="bi bi-fish"></i>
+
+                        Reporte de peces
+
+                    </h3>
+
+
+                    <div class="activity-list">
+
+                        <li>
+
+                            <i class="bi bi-fish"></i>
+
+                            <span>
+                                Consulta los peces
+                                registrados.
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="bi bi-palette"></i>
+
+                            <span>
+                                Consulta especie y
+                                color.
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="bi bi-heart-pulse"></i>
+
+                            <span>
+                                Realiza seguimiento
+                                de su estado.
+                            </span>
+
+                        </li>
+
+                    </div>
+
+
+                    <br>
+
+
+                    <a
+                        href="peces.html"
+                        class="btn-card-secondary"
+                        style="
+                            display:inline-block;
+                            text-decoration:none;
+                        "
+                    >
+
+                        <i class="bi bi-arrow-right"></i>
+
+                        Ver peces
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- REPORTE MANTENIMIENTOS -->
+
+                <article class="details-card">
+
+                    <h3>
+
+                        <i class="bi bi-tools"></i>
+
+                        Reporte de mantenimientos
+
+                    </h3>
+
+
+                    <div class="activity-list">
+
+                        <li>
+
+                            <i class="bi bi-calendar-check"></i>
+
+                            <span>
+                                Consulta las actividades
+                                registradas.
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="bi bi-droplet"></i>
+
+                            <span>
+                                Revisa cambios de agua
+                                y limpiezas.
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="bi bi-clipboard-check"></i>
+
+                            <span>
+                                Consulta el historial
+                                de mantenimiento.
+                            </span>
+
+                        </li>
+
+                    </div>
+
+
+                    <br>
+
+
+                    <a
+                        href="mantenimientos.html"
+                        class="btn-card-secondary"
+                        style="
+                            display:inline-block;
+                            text-decoration:none;
+                        "
+                    >
+
+                        <i class="bi bi-arrow-right"></i>
+
+                        Ver mantenimientos
+
+                    </a>
+
+                </article>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 TABLA RESUMEN
+            ================================================== -->
+
+            <section class="table-card">
+
+                <div
+                    style="
+                        padding:25px 25px 10px;
+                    "
+                >
+
+                    <h2>
+
+                        <i class="bi bi-clipboard-data"></i>
+
+                        Resumen de gestión
+
+                    </h2>
+
+                    <p>
+
+                        Acceso rápido a los módulos
+                        principales de BettaSoft.
+
+                    </p>
+
+                </div>
+
+
+                <div class="table-responsive">
+
+                    <table class="tabla-custom">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Módulo
+                                </th>
+
+                                <th>
+                                    Información
+                                </th>
+
+                                <th>
+                                    Registros
+                                </th>
+
+                                <th>
+                                    Estado
+                                </th>
+
+                                <th>
+                                    Acción
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <!-- ACUARIOS -->
+
+                            <tr>
+
+                                <td>
+
+                                    <strong>
+                                        <i class="bi bi-droplet"></i>
+                                        Acuarios
+                                    </strong>
+
+                                </td>
+
+                                <td>
+                                    Espacios destinados
+                                    al cuidado de los peces.
+                                </td>
+
+                                <td>
+
+                                    <strong
+                                        data-count-acuarios
+                                    >
+                                        0
+                                    </strong>
+
+                                </td>
+
+                                <td>
+
+                                    <span
+                                        class="status-badge active-bg"
+                                    >
+                                        Disponible
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <a
+                                        href="acuarios.html"
+                                        class="btn-card-secondary"
+                                        style="
+                                            display:inline-block;
+                                            text-decoration:none;
+                                        "
+                                    >
+                                        Consultar
+                                    </a>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- PECES -->
+
+                            <tr>
+
+                                <td>
+
+                                    <strong>
+                                        <i class="bi bi-fish"></i>
+                                        Peces
+                                    </strong>
+
+                                </td>
+
+                                <td>
+                                    Registro y seguimiento
+                                    de ejemplares Betta.
+                                </td>
+
+                                <td>
+
+                                    <strong
+                                        data-count-peces
+                                    >
+                                        0
+                                    </strong>
+
+                                </td>
+
+                                <td>
+
+                                    <span
+                                        class="status-badge active-bg"
+                                    >
+                                        Disponible
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <a
+                                        href="peces.html"
+                                        class="btn-card-secondary"
+                                        style="
+                                            display:inline-block;
+                                            text-decoration:none;
+                                        "
+                                    >
+                                        Consultar
+                                    </a>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- MANTENIMIENTOS -->
+
+                            <tr>
+
+                                <td>
+
+                                    <strong>
+                                        <i class="bi bi-tools"></i>
+                                        Mantenimientos
+                                    </strong>
+
+                                </td>
+
+                                <td>
+                                    Historial de actividades
+                                    realizadas en los acuarios.
+                                </td>
+
+                                <td>
+
+                                    <strong
+                                        data-count-mantenimientos
+                                    >
+                                        0
+                                    </strong>
+
+                                </td>
+
+                                <td>
+
+                                    <span
+                                        class="status-badge active-bg"
+                                    >
+                                        Disponible
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <a
+                                        href="mantenimientos.html"
+                                        class="btn-card-secondary"
+                                        style="
+                                            display:inline-block;
+                                            text-decoration:none;
+                                        "
+                                    >
+                                        Consultar
+                                    </a>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 INFORMACIÓN FINAL
+            ================================================== -->
+
+            <section class="welcome-box">
+
+                <h3>
+
+                    <i class="bi bi-info-circle"></i>
+
+                    Información del reporte
+
+                </h3>
+
+                <p>
+
+                    Los indicadores mostrados se actualizan
+                    automáticamente con los registros almacenados
+                    en el sistema.
+
+                </p>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
