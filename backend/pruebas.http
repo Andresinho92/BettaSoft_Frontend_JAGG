@@ -1,0 +1,30 @@
+### 1. REGISTRO DE USUARIO NUEVO
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "usuario": "andres_jagg",
+  "password": "123456password"
+}
+
+###
+
+### 2. INICIO DE SESIÓN CORRECTO
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "usuario": "andres_jagg",
+  "password": "123456password"
+}
+
+###
+
+### 3. INICIO DE SESIÓN CON ERROR (PASSWORD INCORRECTO)
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "usuario": "andres_jagg",
+  "password": "clave_falsa"
+}
