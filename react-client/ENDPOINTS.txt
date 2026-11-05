@@ -1,0 +1,82 @@
+====================================================================
+DOCUMENTACIÓN DE ENDPOINTS - PROYECTO BETTASOFT
+Evidencia SENA: GA7-220501096-AA5-EV02 (API)
+Aprendiz: Andrés González Guerrero
+Base de Datos: db_bettasoft_jagg
+====================================================================
+
+--- MÓDULO DE AUTENTICACIÓN (Tabla: usuarios_jagg) ---
+
+1. REGISTRO DE USUARIOS
+   - Método: POST
+   - Ruta: http://localhost:3000/api/auth/register
+   - Body (JSON):
+     {
+       "usuario": "andres_jagg",
+       "password": "123456password"
+     }
+   - Respuestas esperadas:
+     * 201 Created: { "mensaje": "Registro de usuario satisfactorio", "id_usuario": 1 }
+     * 400 Bad Request: { "error": "El nombre de usuario ya está en uso" }
+     * 500 Internal Server Error: { "error": "Error en el servidor" }
+
+2. INICIO DE SESIÓN (LOGIN)
+   - Método: POST
+   - Ruta: http://localhost:3000/api/auth/login
+   - Body (JSON):
+     {
+       "usuario": "andres_jagg",
+       "password": "123456password"
+     }
+   - Respuestas esperadas:
+     * 200 OK: { "mensaje": "Autenticación satisfactoria", "usuario": { ... } }
+     * 401 Unauthorized: { "error": "Error en la autenticación: usuario o contraseña incorrectos" }
+
+
+--- MÓDULO CRUD DE ACUARIOS (Tabla: acuario_jagg) ---
+
+3. OBTENER TODOS LOS ACUARIOS (Read All)
+   - Método: GET
+   - Ruta: http://localhost:3000/api/acuarios
+   - Respuesta esperada:
+     * 200 OK: Lista en JSON con todos los acuarios registrados.
+
+4. OBTENER UN ACUARIO POR ID (Read One)
+   - Método: GET
+   - Ruta: http://localhost:3000/api/acuarios/:id
+   - Ejemplo: http://localhost:3000/api/acuarios/1
+   - Respuestas esperadas:
+     * 200 OK: Objeto JSON con la información del acuario especificado.
+     * 404 Not Found: { "error": "Acuario no encontrado" }
+
+5. CREAR UN NUEVO ACUARIO (Create)
+   - Método: POST
+   - Ruta: http://localhost:3000/api/acuarios
+   - Body (JSON):
+     {
+       "nombre": "Nano Betta Golfito",
+       "tipo": "Plantado Nano",
+       "capacidad": 6.00
+     }
+   - Respuesta esperada:
+     * 201 Created: { "id": 1, "nombre": "Nano Betta Golfito", "tipo": "Plantado Nano", "capacidad": 6.00 }
+
+6. ACTUALIZAR UN ACUARIO (Update)
+   - Método: PUT
+   - Ruta: http://localhost:3000/api/acuarios/:id
+   - Ejemplo: http://localhost:3000/api/acuarios/1
+   - Body (JSON):
+     {
+       "nombre": "Nano Betta Golfito II",
+       "tipo": "Plantado Nano Premium",
+       "capacidad": 6.50
+     }
+   - Respuesta esperada:
+     * 200 OK: { "message": "Acuario actualizado correctamente" }
+
+7. ELIMINAR UN ACUARIO (Delete)
+   - Método: DELETE
+   - Ruta: http://localhost:3000/api/acuarios/:id
+   - Ejemplo: http://localhost:3000/api/acuarios/1
+   - Respuesta esperada:
+     * 200 OK: { "message": "Acuario eliminado correctamente" }

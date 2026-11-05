@@ -28,3 +28,37 @@ Content-Type: application/json
   "usuario": "andres_jagg",
   "password": "clave_falsa"
 }
+
+###
+
+### 4. OBTENER TODOS LOS ACUARIOS (GET)
+GET http://localhost:3000/api/acuarios
+
+###
+
+### 5. CREAR UN NUEVO ACUARIO (POST)
+POST http://localhost:3000/api/acuarios
+Content-Type: application/json
+
+{
+  "nombre": "Nano Betta Golfito",
+  "tipo": "Plantado Nano",
+  "capacidad": 6.00
+}
+
+###
+
+### 6. ACTUALIZAR UN ACUARIO (PUT)
+PUT http://localhost:3000/api/acuarios/1
+Content-Type: application/json
+
+{
+  "nombre": "Nano Betta Golfito II",
+  "tipo": "Plantado Nano Premium",
+  "capacidad": 6.50
+}
+
+###
+
+### 7. ELIMINAR UN ACUARIO (DELETE)
+DELETE http://localhost:3000/api/acuarios/1
