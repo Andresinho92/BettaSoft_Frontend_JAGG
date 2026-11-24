@@ -1,6 +1,6 @@
 ====================================================================
 DOCUMENTACIÓN DE ENDPOINTS - PROYECTO BETTASOFT
-Evidencia SENA: GA7-220501096-AA5-EV02 (API)
+Evidencia SENA: GA7-220501096-AA5-EV04 (API del proyecto)
 Aprendiz: Andrés González Guerrero
 Base de Datos: db_bettasoft_jagg
 ====================================================================
